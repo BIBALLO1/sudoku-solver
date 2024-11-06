@@ -1,0 +1,72 @@
+body {
+	background-color: black;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(9, 40px);
+	grid-template-rows: repeat(9, 40px);
+	gap: 1px;
+	background-color: black;
+	width: fit-content;
+	margin: 20px auto;
+}
+
+.cell {
+	width: 38px;
+	height: 38px;
+	/* padding: 2px; */
+	font-size: 16px;
+	text-align: center;
+	border: solid 1px;
+	outline: none;
+	background-color: #ffffff;
+}
+.cell:nth-child(3n+1) {
+	border-left: 3px solid black;
+}
+.cell:nth-child(n+28):nth-child(-n+36),
+.cell:nth-child(n+55):nth-child(-n+63) {
+	border-top: 3px solid black;
+}
+
+.controls {
+	width: 512px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	background-color: #404040;
+	border-radius: 0.3em;
+}
+
+.controlButton {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #222222;
+	border-radius: 0.3em;
+	background-color: #FFFFFF;
+	color: black;
+	transition-duration: 0.1s;
+}
+.controlButton:hover {
+	background-color: #DDDDDD;
+	cursor: pointer;
+}
+.controlButton:active {
+	background-color: #AAAAAA;
+	transform: translateY(1px);
+}
+
+.roboto {
+	font-family: "Roboto", serif;
+	font-weight: 400;
+	font-style: normal;
+}
